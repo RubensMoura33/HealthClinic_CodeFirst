@@ -11,6 +11,7 @@ namespace HealthClinic_CodeFirst.Domains
     {
         [Key]
 
+
         public Guid IdClinica { get; set; } = Guid.NewGuid();
 
         [Column(TypeName = "VARCHAR(50)")]

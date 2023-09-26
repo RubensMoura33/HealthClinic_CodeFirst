@@ -22,11 +22,11 @@ namespace HealthClinic_CodeFirst.Domains
         [Required(ErrorMessage = "Endereco obrigatorio")]
         public string? Endereco { get; set; }
 
-        [Column(TypeName = "DATE")]
+        [Column(TypeName = "SMALLDATETIME")]
         [Required(ErrorMessage = "Horario de abertura obrigatorio")]
         public DateTime HorarioAbertura { get; set; }
 
-        [Column(TypeName = "DATE")]
+        [Column(TypeName = "SMALLDATETIME")]
         [Required(ErrorMessage = "Horario de fechamento obrigatorio")]
         public DateTime HorarioFechamento { get; set; }
 

@@ -12,6 +12,10 @@ namespace HealthClinic_CodeFirst.Domains
         public Guid IdUsuario { get; set; } = Guid.NewGuid();
 
         [Column(TypeName = "VARCHAR (100)")]
+        [Required(ErrorMessage = "Nome do usuario obrigatorio")]
+        public string? Nome {  get; set; } 
+
+        [Column(TypeName = "VARCHAR (100)")]
         [Required(ErrorMessage = "O email do usuario e obrigatorio")]
 
         public string? Email { get; set; }

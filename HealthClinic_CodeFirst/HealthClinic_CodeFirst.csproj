@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.11" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.10" />
@@ -24,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Utils\NovaPasta\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Utils\" />
-    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>

@@ -79,3 +79,13 @@ C:\Users\50496884859\Desktop\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\D
 C:\Users\50496884859\Desktop\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.pdb
 C:\Users\50496884859\Desktop\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.genruntimeconfig.cache
 C:\Users\50496884859\Desktop\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\ref\HealthClinic_CodeFirst.dll
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.csproj.AssemblyReference.cache
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.AssemblyInfoInputs.cache
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.AssemblyInfo.cs
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.csproj.CoreCompileInputs.cache
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.dll
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\refint\HealthClinic_CodeFirst.dll
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst\obj\Debug\net7.0\HealthClinic_CodeFirst.pdb

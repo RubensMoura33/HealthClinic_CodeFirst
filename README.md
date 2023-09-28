@@ -1,1 +1,0 @@
-# HealthClinic_CodeFirst

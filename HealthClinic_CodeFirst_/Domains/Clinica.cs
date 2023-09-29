@@ -10,8 +10,6 @@ namespace HealthClinic_CodeFirst_.Domains
     public class Clinica
     {
         [Key]
-
-
         public Guid IdClinica { get; set; } = Guid.NewGuid();
 
         [Column(TypeName = "VARCHAR(50)")]

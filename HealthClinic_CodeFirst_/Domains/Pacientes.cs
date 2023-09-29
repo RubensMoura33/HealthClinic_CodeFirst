@@ -17,8 +17,10 @@ namespace HealthClinic_CodeFirst_.Domains
         public string? Nome { get; set; }
 
         [Column(TypeName = "DATE")]
-        [Required(ErrorMessage = "Data de nascimento obrigatoria")]
-        public DateTime DataDeNascimento { get; set; }
+        [Required(ErrorMessage = "Data de nascimento obrigatoria!")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? DataDeNascimento { get; set; }
 
         [Column(TypeName = "CHAR(11)")]
         [Required(ErrorMessage = "Data de nascimento obrigatoria")]

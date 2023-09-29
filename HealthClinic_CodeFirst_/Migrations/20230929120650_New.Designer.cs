@@ -4,6 +4,7 @@ using HealthClinic_CodeFirst_.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HealthClinic_CodeFirst_.Migrations
 {
     [DbContext(typeof(HealthContext))]
-    partial class HealthContextModelSnapshot : ModelSnapshot
+    [Migration("20230929120650_New")]
+    partial class New
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -189,8 +192,7 @@ namespace HealthClinic_CodeFirst_.Migrations
                         .IsRequired()
                         .HasColumnType("CHAR(11)");
 
-                    b.Property<DateTime?>("DataDeNascimento")
-                        .IsRequired()
+                    b.Property<DateTime>("DataDeNascimento")
                         .HasColumnType("DATE");
 
                     b.Property<string>("Nome")

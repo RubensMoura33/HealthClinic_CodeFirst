@@ -24,8 +24,8 @@ namespace HealthClinic_CodeFirst_.Controllers
         {
             try
             {
-                _usuarioRepository!.BuscarPorId(id);
-                return Ok();
+               
+                return Ok( _usuarioRepository!.BuscarPorId(id));
 
             }
             catch (Exception erro)
@@ -42,7 +42,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         {
             try
             {
-                _usuarioRepository?.BuscarPorId(id);
+                _usuarioRepository?.Deletar(id);
                 return Ok();
             }
             catch (Exception erro)
@@ -99,6 +99,23 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(erro.Message);
             } 
         }
+
+        [HttpGet("Login")]
+        public IActionResult Get(string email, string senha)
+        {
+            try
+            {
+                Usuario usuarioBuscado = _usuarioRepository!.BuscarPorEmailSenha(email, senha);
+                return Ok(usuarioBuscado);  
+            }
+            catch (Exception erro)
+            {
+
+                return BadRequest(erro.Message);
+            }
+        }
+
+        
 
        }
 }

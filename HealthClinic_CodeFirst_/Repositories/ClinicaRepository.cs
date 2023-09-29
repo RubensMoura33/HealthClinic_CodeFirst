@@ -18,8 +18,15 @@ namespace HealthClinic_CodeFirst_.Repositories
 
             if(clinicaBuscada != null)
             {
-                clinicaBuscada.
+                clinicaBuscada.NomeFantasia = clinica.NomeFantasia;
+                clinicaBuscada.Endereco = clinica.Endereco; 
+                clinicaBuscada.HorarioAbertura = clinica.HorarioAbertura;
+                clinicaBuscada.HorarioFechamento = clinica.HorarioFechamento;
+                clinicaBuscada.RazaoSocial = clinica.RazaoSocial;
+                clinicaBuscada.CNPJ = clinica.CNPJ;
             }
+            _healthcontext.Clinica.Update(clinicaBuscada!);
+            _healthcontext.SaveChanges();
         }
 
         public void Cadastrar(Clinica clinica)

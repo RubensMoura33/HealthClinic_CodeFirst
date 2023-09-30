@@ -27,7 +27,26 @@ namespace HealthClinic_CodeFirst_.Repositories
 
         public StatusConsulta BuscarPorId(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                StatusConsulta statusBuscado = _healthContext!.StatusConsulta.Select(h => new StatusConsulta
+                {
+                    IdStatusConsulta = h.IdStatusConsulta,
+                    Situacao = h.Situacao
+                }).FirstOrDefault(h => h.IdStatusConsulta == id)!;
+
+                if(statusBuscado != null)
+                {
+                    return statusBuscado;
+                }
+                return null!;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Cadastrar(StatusConsulta statusConsulta)

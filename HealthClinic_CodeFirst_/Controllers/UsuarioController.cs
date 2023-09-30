@@ -19,7 +19,6 @@ namespace HealthClinic_CodeFirst_.Controllers
         }
 
         [HttpGet("{id}")]
-
         public IActionResult Get(Guid id)
         {
             try
@@ -36,7 +35,6 @@ namespace HealthClinic_CodeFirst_.Controllers
         }
 
         [HttpDelete]
-
         public IActionResult Delete(Guid id) 
         
         {
@@ -69,7 +67,6 @@ namespace HealthClinic_CodeFirst_.Controllers
         }
 
         [HttpPut]
-
         public IActionResult Put (Guid id, Usuario usuario)
 
         {
@@ -86,7 +83,6 @@ namespace HealthClinic_CodeFirst_.Controllers
         }
 
         [HttpGet]
-
         public IActionResult Get ()
         {
             try
@@ -100,7 +96,7 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
-        [HttpGet("Login")]
+        [HttpGet("Login")]  
         public IActionResult Get(string email, string senha)
         {
             try

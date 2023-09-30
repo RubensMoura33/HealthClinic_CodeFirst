@@ -24,6 +24,8 @@ namespace HealthClinic_CodeFirst_.Repositories
                 usuarioBuscado.Senha = usuario.Senha;
 
                 usuarioBuscado.Nome = usuario.Nome;
+
+                usuarioBuscado.IdTipoUsuario = usuario.IdTipoUsuario;
             }
 
             _healthContext.Usuario.Update(usuarioBuscado!);

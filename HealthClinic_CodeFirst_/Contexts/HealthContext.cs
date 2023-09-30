@@ -27,9 +27,15 @@ namespace HealthClinic_CodeFirst_.Contexts
 
         //Define as opcoes de construcao do banco (StringConexao)
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        /*protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=NOTE11-S13; DataBase= HealthClinic_CodeFirst; User Id = sa; Pwd = Senai@134; TrustServerCertificate=True;");
+            base.OnConfiguring(optionsBuilder);
+        }*/
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=R4ULM1LGR4U\\SQLEXPRESSS; DataBase= HealthClinic_CodeFirst; User Id = sa; Pwd = Binho$2022; TrustServerCertificate=True;");
             base.OnConfiguring(optionsBuilder);
         }
 

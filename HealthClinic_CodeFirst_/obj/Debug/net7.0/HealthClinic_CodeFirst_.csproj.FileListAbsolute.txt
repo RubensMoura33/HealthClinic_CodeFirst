@@ -166,3 +166,5 @@ C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_Co
 C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst_\obj\Debug\net7.0\HealthClinic_CodeFirst_.pdb
 C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst_\obj\Debug\net7.0\HealthClinic_CodeFirst_.genruntimeconfig.cache
 C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst_\obj\Debug\net7.0\ref\HealthClinic_CodeFirst_.dll
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst_\bin\Debug\net7.0\HealthClinic_CodeFirst_.xml
+C:\Users\raulc\OneDrive\Área de Trabalho\HealthClinic_CodeFirst\HealthClinic_CodeFirst_\obj\Debug\net7.0\HealthClinic_CodeFirst_.xml

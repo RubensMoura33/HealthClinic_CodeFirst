@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HealthClinic_CodeFirst_</name>
+    </assembly>
+    <members>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.BD_Health">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.BD_Health.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.BD_Health.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.BD_Health.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.New">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.New_">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New_.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New_.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.New_.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.Home">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Home.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Home.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Home.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

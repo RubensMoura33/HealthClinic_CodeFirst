@@ -18,8 +18,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             _comentariosConsultaRepository = new ComentariosConsultaRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns></returns>
+        /// 
         [HttpGet]
-
         public IActionResult Get()
         {
             try
@@ -33,6 +37,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="comentario"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
         public IActionResult Post (ComentariosConsulta comentario)
         {
@@ -48,6 +58,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
         public IActionResult Delete(Guid id) 
         {
@@ -63,6 +79,13 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="comentario"></param>
+        /// <returns></returns>
+        /// 
         [HttpPut]
         public IActionResult Put (Guid id, ComentariosConsulta comentario)
         {
@@ -78,6 +101,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo BuscarPorId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpGet("{id}")]
         public IActionResult Get(Guid id) 
         {

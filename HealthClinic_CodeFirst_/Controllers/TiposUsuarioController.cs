@@ -18,8 +18,14 @@ namespace HealthClinic_CodeFirst_.Controllers
             _tiposUsuarioRepository = new TiposUsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="tipoUsuario"></param>
+        /// <returns></returns>
+        /// 
         [HttpPut]
-
         public IActionResult Put(Guid id, TiposUsuario tipoUsuario) 
         {
             try
@@ -35,8 +41,13 @@ namespace HealthClinic_CodeFirst_.Controllers
 
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="tipoUsuario"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
-
         public IActionResult Post (TiposUsuario tipoUsuario)
         {
             try
@@ -52,8 +63,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns>Lista de TiposUsuario</returns>
+        /// 
         [HttpGet]
-        
         public IActionResult Get()
         {
             try
@@ -68,9 +83,13 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint que aciona o metodo BuscarPorId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto Buscado</returns>
+        /// 
         [HttpGet("{id}")]
-
         public IActionResult Get(Guid id)
         {
             try
@@ -84,9 +103,14 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
-
-        public IActionResult Delete(Guid id) 
+         public IActionResult Delete(Guid id) 
         {
             try
             {

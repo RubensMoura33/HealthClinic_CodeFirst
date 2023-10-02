@@ -34,5 +34,13 @@ namespace HealthClinic_CodeFirst_.Domains
         [Required(ErrorMessage = "CEP obrigatorio")]
         public string? CEP { get; set; }
 
+        //referencia a tabela Usuario = FOREIGN KEY (FK)
+
+        public Guid IdUsuario { get; set; }
+
+        [ForeignKey(nameof(IdUsuario))]
+
+        public Usuario? Usuario { get; set; }
+
     }
 }

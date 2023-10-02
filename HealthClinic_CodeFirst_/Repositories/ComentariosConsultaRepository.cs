@@ -29,33 +29,9 @@ namespace HealthClinic_CodeFirst_.Repositories
 
         public ComentariosConsulta BuscarPorId(Guid id)
         {
-            try
-            {
-                ComentariosConsulta comentarioBuscado = _healthContext!.ComentariosConsultas.Select(h => new ComentariosConsulta
-            {
-                IdComentarioConsulta = h.IdConsulta,
-                Descricao = h.Descricao,
-                IdConsulta = h.IdConsulta,
-
-                Consultas = new Consultas
-                {
-                    IdConsulta = h.Consultas!.IdConsulta
-
-                }
-            }).FirstOrDefault(h => h.IdComentarioConsulta == id)!;
-
-            if (comentarioBuscado != null)
-            {
-                return comentarioBuscado;
-            }
-
-            return null!;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            } 
+            
+            /*return _healthContext!.ComentariosConsultas.Find(id);*/
+            return _healthContext!.ComentariosConsultas.FirstOrDefault(h => h.IdComentarioConsulta == id)!;
         }
 
         public void Cadastar(ComentariosConsulta comentario)

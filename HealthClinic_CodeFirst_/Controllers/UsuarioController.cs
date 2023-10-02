@@ -18,6 +18,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo BuscarPorId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Objeto Buscado</returns>
+        /// 
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
@@ -33,7 +39,12 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(erro.Message);
             }
         }
-
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
         public IActionResult Delete(Guid id) 
         
@@ -50,8 +61,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
-
         public IActionResult Post (Usuario usuario) 
         {
             try
@@ -66,6 +81,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put (Guid id, Usuario usuario)
 
@@ -82,6 +103,10 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get ()
         {
@@ -96,6 +121,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo BuscarPorEmailSenha 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="senha"></param>
+        /// <returns></returns>
         [HttpGet("Login")]  
         public IActionResult Get(string email, string senha)
         {
@@ -110,8 +141,5 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(erro.Message);
             }
         }
-
-        
-
        }
 }

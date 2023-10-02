@@ -23,6 +23,7 @@ namespace HealthClinic_CodeFirst_.Repositories
                 pacienteBuscado.CPF = paciente.CPF;
                 pacienteBuscado.Telefone = paciente.Telefone;
                 pacienteBuscado.CEP = paciente.CEP;
+                pacienteBuscado.IdUsuario = paciente.IdUsuario;
             }
             _healthContext.Pacientes.Update(pacienteBuscado!);
             _healthContext.SaveChanges();
@@ -40,6 +41,14 @@ namespace HealthClinic_CodeFirst_.Repositories
                     CPF = h.CPF,
                     Telefone = h.Telefone,
                     CEP = h.CEP,
+                    IdUsuario = h.IdUsuario,
+
+                    Usuario = new Usuario 
+                    {
+                    IdUsuario = h.Usuario!.IdUsuario,
+                    Nome=h.Usuario.Nome
+                    
+                    }
                 }).FirstOrDefault(h => h.IdPaciente == id)!;
 
                 if(pacienteBuscado != null)

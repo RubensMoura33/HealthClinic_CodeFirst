@@ -18,6 +18,11 @@ namespace HealthClinic_CodeFirst_.Controllers
             _pacienteRepository = new PacientesRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns></returns>
+        /// 
         [HttpGet]
 
         public IActionResult Get() 
@@ -33,7 +38,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="paciente"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
 
         public IActionResult Post (Pacientes paciente)
@@ -51,9 +61,13 @@ namespace HealthClinic_CodeFirst_.Controllers
            
         }
 
-
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
-
         public IActionResult Delete(Guid id) 
         {
             try
@@ -67,9 +81,14 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(e.Message);
             } 
         }
-
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="paciente"></param>
+        /// <returns></returns>
+        /// 
         [HttpPut]
-
         public IActionResult Put(Guid id, Pacientes paciente)
         {
             try
@@ -84,8 +103,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo BuscarPorId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-
         public IActionResult Get(Guid id) 
         {
             try
@@ -99,7 +122,5 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         
         }
-
-
     }
 }

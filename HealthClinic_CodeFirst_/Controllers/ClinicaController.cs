@@ -18,9 +18,16 @@ namespace HealthClinic_CodeFirst_.Controllers
             _clinicaRepository = new ClinicaRepository();
         }
 
+
+        /// <summary>
+        /// Endpoit que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="clinica"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
 
-        public IActionResult Post (Clinica clinica)
+        public IActionResult Post(Clinica clinica)
         {
             try
             {
@@ -34,9 +41,14 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoit que aciona o metodo Listar
+        /// </summary>
+        /// <returns>Lista de clinicas</returns>
+        /// 
         [HttpGet]
 
-        public IActionResult Get () 
+        public IActionResult Get()
         {
             try
             {
@@ -49,9 +61,16 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoit que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="clinica"></param>
+        /// <returns></returns>
+        /// 
         [HttpPut]
 
-        public IActionResult Put (Guid id , Clinica clinica) 
+        public IActionResult Put(Guid id, Clinica clinica)
         {
             try
             {
@@ -61,13 +80,19 @@ namespace HealthClinic_CodeFirst_.Controllers
             catch (Exception erro)
             {
 
-                return BadRequest(erro.Message );
+                return BadRequest(erro.Message);
             }
         }
 
+        /// <summary>
+        /// Endpoit que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
 
-        public IActionResult Delete (Guid id) 
+        public IActionResult Delete(Guid id)
         {
             try
             {

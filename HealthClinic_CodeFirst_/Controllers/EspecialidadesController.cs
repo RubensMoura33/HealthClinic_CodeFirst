@@ -18,6 +18,13 @@ namespace HealthClinic_CodeFirst_.Controllers
             _especialidadesRepository = new EspecialidadesRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="especialidade"></param>
+        /// <returns></returns>
+        /// 
         [HttpPut]
         public IActionResult Put(Guid id, Especialidades especialidade)
         {
@@ -34,6 +41,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpGet("{id}")]
         public IActionResult Get(Guid id) 
         {
@@ -48,6 +61,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="especialidade"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
         public IActionResult Post(Especialidades especialidade)
         {
@@ -63,6 +82,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
         public IActionResult Delete(Guid id)
         {
@@ -70,6 +95,11 @@ namespace HealthClinic_CodeFirst_.Controllers
             return StatusCode(204);
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns></returns>
+        /// 
         [HttpGet]
         public IActionResult Get()
         {

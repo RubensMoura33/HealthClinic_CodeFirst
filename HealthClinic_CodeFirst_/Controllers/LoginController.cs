@@ -22,6 +22,11 @@ namespace HealthClinic_CodeFirst_.Controllers
             _usuarioRepository = new UsuarioRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo de login
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(LoginViewModel usuario)
         {

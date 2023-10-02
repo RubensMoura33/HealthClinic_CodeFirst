@@ -18,6 +18,11 @@ namespace HealthClinic_CodeFirst_.Controllers
             _statusConsultaRepository = new StatusConsultaRepository();
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Listar
+        /// </summary>
+        /// <returns></returns>
+        /// 
         [HttpGet]
         public IActionResult Get()
         {
@@ -31,7 +36,12 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(e.Message);
             }
         }
-
+        /// <summary>
+        /// Endpoint que aciona o metodo Cadastrar
+        /// </summary>
+        /// <param name="statusConsulta"></param>
+        /// <returns></returns>
+        /// 
         [HttpPost]
          public IActionResult Post(StatusConsulta statusConsulta)
         {
@@ -47,6 +57,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Atualizar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="statusConsulta"></param>
+        /// <returns></returns>
         [HttpPut]
         public IActionResult Put(Guid id, StatusConsulta statusConsulta)
         {
@@ -62,6 +78,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint que aciona o metodo Deletar
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpDelete]
          public IActionResult Delete(Guid id) 
         {
@@ -77,6 +99,12 @@ namespace HealthClinic_CodeFirst_.Controllers
             } 
         }
 
+        /// <summary>
+        /// ENdpoint que aciona o metodo BuscarPorId
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// 
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {

@@ -4,6 +4,374 @@
         <name>HealthClinic_CodeFirst_</name>
     </assembly>
     <members>
+        <member name="M:HealthClinic_CodeFirst_.Contexts.HealthContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
+            <summary>
+            String de conexao
+            </summary>
+            <param name="optionsBuilder"></param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.Post(HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Endpoit que aciona o metodo Cadastrar
+            </summary>
+            <param name="clinica"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.Get">
+            <summary>
+            Endpoit que aciona o metodo Listar
+            </summary>
+            <returns>Lista de clinicas</returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Endpoit que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="clinica"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.Delete(System.Guid)">
+            <summary>
+            Endpoit que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Post(HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="comentario"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="comentario"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Get">
+            <summary>
+            Aciona que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Post(HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="consulta"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Endpoint que aciona metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="consulta"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="especialidade"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Post(HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="especialidade"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.LoginController.Post(HealthClinic_CodeFirst_.ViewModels.LoginViewModel)">
+            <summary>
+            Endpoint que aciona o metodo de login
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BucarPorId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Post(HealthClinic_CodeFirst_.Domains.Medicos)">
+             <summary>
+            Endpoint que aciona o metodo Cadastrar 
+             </summary>
+             <param name="medico"></param>
+             <returns></returns>
+             
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Medicos)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="medico"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Post(HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="paciente"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="paciente"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Post(HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="statusConsulta"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="statusConsulta"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Get(System.Guid)">
+            <summary>
+            ENdpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="tipoUsuario"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Post(HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="tipoUsuario"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns>Lista de TiposUsuario</returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto Buscado</returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Get(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorId
+            </summary>
+            <param name="id"></param>
+            <returns>Objeto Buscado</returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Delete(System.Guid)">
+            <summary>
+            Endpoint que aciona o metodo Deletar
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Post(HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Endpoint que aciona o metodo Cadastrar
+            </summary>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Endpoint que aciona o metodo Atualizar
+            </summary>
+            <param name="id"></param>
+            <param name="usuario"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Get">
+            <summary>
+            Endpoint que aciona o metodo Listar
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Get(System.String,System.String)">
+            <summary>
+            Endpoint que aciona o metodo BuscarPorEmailSenha 
+            </summary>
+            <param name="email"></param>
+            <param name="senha"></param>
+            <returns></returns>
+        </member>
         <member name="T:HealthClinic_CodeFirst_.Migrations.BD_Health">
             <inheritdoc />
         </member>
@@ -50,6 +418,42 @@
             <inheritdoc />
         </member>
         <member name="M:HealthClinic_CodeFirst_.Migrations.Home.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.Update">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.Update_2">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_2.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_2.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_2.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Migrations.Update_3">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_3.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_3.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Migrations.Update_3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
         </member>
     </members>

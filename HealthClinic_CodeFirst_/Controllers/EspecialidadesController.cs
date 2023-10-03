@@ -6,13 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/especialidades
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class EspecialidadesController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _especialidadesRepository que irá receber todos os métodos definidos na interface IEspecialidadesRepository
+        /// </summary>
         private IEspecialidadesRepository? _especialidadesRepository;
 
+        /// <summary>
+        /// Instancia o objeto _especialidadesRepository para que haja referência aos métodos no repositório
+        /// </summary>
         public EspecialidadesController()
         {
             _especialidadesRepository = new EspecialidadesRepository();
@@ -38,7 +54,7 @@ namespace HealthClinic_CodeFirst_.Controllers
 
                 return BadRequest(e.Message);
             }
-            
+
         }
 
         /// <summary>
@@ -48,7 +64,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id) 
+        public IActionResult Get(Guid id)
         {
             try
             {
@@ -58,7 +74,7 @@ namespace HealthClinic_CodeFirst_.Controllers
             {
 
                 throw;
-            } 
+            }
         }
 
         /// <summary>
@@ -113,6 +129,5 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(e.Message);
             }
         }
-
     }
 }

@@ -6,14 +6,30 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/statusconsulta
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class StatusConsultaController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _statusConsultaRepository que irá receber todos os métodos definidos na interface IStatusConsultaRepository
+        /// </summary>
         private IStatusConsultaRepository? _statusConsultaRepository;
 
-        public StatusConsultaController() 
+        /// <summary>
+        /// Instancia o objeto _statusConsultaRepository para que haja referência aos métodos no repositório
+        /// </summary>
+        public StatusConsultaController()
         {
             _statusConsultaRepository = new StatusConsultaRepository();
         }
@@ -43,7 +59,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPost]
-         public IActionResult Post(StatusConsulta statusConsulta)
+        public IActionResult Post(StatusConsulta statusConsulta)
         {
             try
             {
@@ -85,7 +101,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpDelete]
-         public IActionResult Delete(Guid id) 
+        public IActionResult Delete(Guid id)
         {
             try
             {
@@ -96,7 +112,7 @@ namespace HealthClinic_CodeFirst_.Controllers
             {
 
                 return BadRequest(e.Message);
-            } 
+            }
         }
 
         /// <summary>

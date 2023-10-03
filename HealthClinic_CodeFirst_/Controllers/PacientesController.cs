@@ -6,13 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/pacientes
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class PacientesController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _pacienteRepository que irá receber todos os métodos definidos na interface IPacientesRepository
+        /// </summary>
         private IPacientesRepository? _pacienteRepository;
 
+        /// <summary>
+        /// Instancia o objeto _pacienteRepository para que haja referência aos métodos no repositório
+        /// </summary>
         public PacientesController()
         {
             _pacienteRepository = new PacientesRepository();
@@ -24,12 +40,11 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpGet]
-
-        public IActionResult Get() 
+        public IActionResult Get()
         {
             try
             {
-                return Ok (_pacienteRepository!.Listar());
+                return Ok(_pacienteRepository!.Listar());
             }
             catch (Exception e)
             {
@@ -45,20 +60,19 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPost]
-
-        public IActionResult Post (Pacientes paciente)
+        public IActionResult Post(Pacientes paciente)
         {
             try
             {
-                 _pacienteRepository!.Cadastrar(paciente);
-                            return Ok();
+                _pacienteRepository!.Cadastrar(paciente);
+                return Ok();
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
             }
-           
+
         }
 
         /// <summary>
@@ -68,18 +82,18 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpDelete]
-        public IActionResult Delete(Guid id) 
+        public IActionResult Delete(Guid id)
         {
             try
             {
                 _pacienteRepository!.Deletar(id);
-                            return Ok("Deletado com sucesso");
+                return Ok("Deletado com sucesso");
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
-            } 
+            }
         }
         /// <summary>
         /// Endpoint que aciona o metodo Atualizar
@@ -109,7 +123,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <param name="id"></param>
         /// <returns></returns>
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id) 
+        public IActionResult Get(Guid id)
         {
             try
             {
@@ -120,7 +134,6 @@ namespace HealthClinic_CodeFirst_.Controllers
 
                 return BadRequest(e.Message);
             }
-        
         }
     }
 }

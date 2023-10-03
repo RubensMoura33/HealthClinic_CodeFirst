@@ -5,14 +5,30 @@ using HealthClinic_CodeFirst_.Utils;
 
 namespace HealthClinic_CodeFirst_.Repositories
 {
+    /// <summary>
+    /// Classe responsavel pelo repositorio Usuario
+    /// </summary>
     public class UsuarioRepository : IUsuarioRepository
     {
+        /// <summary>
+        /// Cria um novo objeto _healthContext do tipo HealthContext
+        /// </summary>
+        /// 
         private readonly HealthContext? _healthContext;
 
+        /// <summary>
+        /// Instancia o objeto _healthcontext para que haja referência aos dados do banco
+        /// </summary>
         public UsuarioRepository()
         {
             _healthContext = new HealthContext();
         }
+
+        /// <summary>
+        /// Atualizar um objeto
+        /// </summary>
+        /// <param name="id">Id do objeto que será atualizado</param>
+        /// <param name="usuario[">Objeto atualizado(novas informações)</param>
         public void Atualizar(Guid id, Usuario usuario)
         {
             Usuario usuarioBuscado = _healthContext!.Usuario.Find(id)!;
@@ -33,6 +49,12 @@ namespace HealthClinic_CodeFirst_.Repositories
             _healthContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Buscar um usuario atraves do email e senha
+        /// </summary>
+        /// <param name="email">Email do usuario a ser buscado</param>
+        /// <param name="senha">Senha do usuario a ser buscado</param>
+        /// <returns>Objeto Buscado</returns>
         public Usuario BuscarPorEmailSenha(string email, string senha)
         {
             try
@@ -72,6 +94,11 @@ namespace HealthClinic_CodeFirst_.Repositories
             }
         }
 
+        /// <summary>
+        /// Buscar um objeto atraves do seu Id
+        /// </summary>
+        /// <param name="id">Id do objeto a ser buscado</param>
+        /// <returns>Objeto buscado</returns>
         public Usuario BuscarPorId(Guid id)
         {
             try
@@ -107,6 +134,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             }
         }
 
+        /// <summary>
+        /// Cadastrar um novo objeto
+        /// </summary>
+        /// <param name="usuario">Objeto que será cadastrado</param>
         public void Cadastrar(Usuario usuario)
         {
             try
@@ -124,6 +155,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             }
         }
 
+        /// <summary>
+        /// Deletar um objeto
+        /// </summary>
+        /// <param name="id">Id do objeto que será deletado</param>
         public void Deletar(Guid id)
         {
             Usuario usuarioBuscado = _healthContext!.Usuario.Find(id)!;
@@ -133,6 +168,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             _healthContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Listar todos os objetos cadastrados
+        /// </summary>
+        /// <returns>Lista com os objetos</returns>
         public List<Usuario> Listar()
         {
             return _healthContext!.Usuario.ToList();

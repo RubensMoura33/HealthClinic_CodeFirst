@@ -4,15 +4,30 @@
         <name>HealthClinic_CodeFirst_</name>
     </assembly>
     <members>
+        <member name="T:HealthClinic_CodeFirst_.Contexts.HealthContext">
+            <summary>
+            Classe Context(Conexao com o banco de dados)
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Contexts.HealthContext.OnConfiguring(Microsoft.EntityFrameworkCore.DbContextOptionsBuilder)">
             <summary>
             String de conexao
             </summary>
             <param name="optionsBuilder"></param>
         </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.ClinicaController._clinicaRepository">
+            <summary>
+            Objeto _clinicaRepository que irá receber todos os métodos definidos na interface IClinicaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.#ctor">
+            <summary>
+            Instancia o objeto _clinicaRepository para que haja referência aos métodos no repositório
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.ClinicaController.Post(HealthClinic_CodeFirst_.Domains.Clinica)">
             <summary>
-            Endpoit que aciona o metodo Cadastrar
+            Endpoit que aciona o metodo Cadastrar 
             </summary>
             <param name="clinica"></param>
             <returns></returns>
@@ -41,6 +56,16 @@
             <param name="id"></param>
             <returns></returns>
             
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController._comentariosConsultaRepository">
+            <summary>
+            Objeto _comentariosConsultaRepository que irá receber todos os métodos definidos na interface IComentariosConsultaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.#ctor">
+            <summary>
+            Instancia o objeto _comentariosConsultaRepository para que haja referência aos métodos no repositório
+            </summary>
         </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.ComentariosConsultaController.Get">
             <summary>
@@ -82,6 +107,16 @@
             <returns></returns>
             
         </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.ConsultasController._consultasRepository">
+            <summary>
+            Objeto _consultasRepository que irá receber todos os métodos definidos na interface IConsultasRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.#ctor">
+            <summary>
+            Instancia o objeto _consultasRepository para que haja referência aos métodos no repositório
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.ConsultasController.Get">
             <summary>
             Aciona que aciona o metodo Listar
@@ -121,6 +156,16 @@
             <param name="consulta"></param>
             <returns></returns>
             
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.EspecialidadesController._especialidadesRepository">
+            <summary>
+            Objeto _especialidadesRepository que irá receber todos os métodos definidos na interface IEspecialidadesRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.#ctor">
+            <summary>
+            Instancia o objeto _especialidadesRepository para que haja referência aos métodos no repositório
+            </summary>
         </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.EspecialidadesController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.Especialidades)">
             <summary>
@@ -162,12 +207,33 @@
             <returns></returns>
             
         </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.LoginController._usuarioRepository">
+            <summary>
+            Objeto _usuarioRepository que irá receber todos os métodos definidos na interface IUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.LoginController.#ctor">
+            <summary>
+            Instancia o objeto _usuarioRepository para que haja referência aos métodos no repositório
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.LoginController.Post(HealthClinic_CodeFirst_.ViewModels.LoginViewModel)">
             <summary>
             Endpoint que aciona o metodo de login
             </summary>
             <param name="usuario"></param>
             <returns></returns>
+            
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.MedicoController._medicosRepository">
+            <summary>
+            Objeto _medicosRepository que irá receber todos os métodos definidos na interface IMedicosRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.#ctor">
+            <summary>
+            Instancia o objeto _medicosRepository para que haja referência aos métodos no repositório
+            </summary>
         </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.MedicoController.Get(System.Guid)">
             <summary>
@@ -209,6 +275,16 @@
             <returns></returns>
             
         </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.PacientesController._pacienteRepository">
+            <summary>
+            Objeto _pacienteRepository que irá receber todos os métodos definidos na interface IPacientesRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.#ctor">
+            <summary>
+            Instancia o objeto _pacienteRepository para que haja referência aos métodos no repositório
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.PacientesController.Get">
             <summary>
             Endpoint que aciona o metodo Listar
@@ -247,6 +323,16 @@
             </summary>
             <param name="id"></param>
             <returns></returns>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.StatusConsultaController._statusConsultaRepository">
+            <summary>
+            Objeto _statusConsultaRepository que irá receber todos os métodos definidos na interface IStatusConsultaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.#ctor">
+            <summary>
+            Instancia o objeto _statusConsultaRepository para que haja referência aos métodos no repositório
+            </summary>
         </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.StatusConsultaController.Get">
             <summary>
@@ -287,6 +373,16 @@
             <returns></returns>
             
         </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController._tiposUsuarioRepository">
+            <summary>
+            Objeto _tiposUsuarioRepository que irá receber todos os métodos definidos na interface IClinicaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.#ctor">
+            <summary>
+            Instancia o objeto _tiposUsuarioRepository para que haja referência aos métodos no repositório
+            </summary>
+        </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.TiposUsuarioController.Put(System.Guid,HealthClinic_CodeFirst_.Domains.TiposUsuario)">
             <summary>
             Endpoint que aciona o metodo Atualizar
@@ -326,6 +422,16 @@
             <param name="id"></param>
             <returns></returns>
             
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Controllers.UsuarioController._usuarioRepository">
+            <summary>
+            Objeto _usuarioRepository que irá receber todos os métodos definidos na interface IUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.#ctor">
+            <summary>
+            Instancia o objeto _usuarioRepository para que haja referência aos métodos no repositório
+            </summary>
         </member>
         <member name="M:HealthClinic_CodeFirst_.Controllers.UsuarioController.Get(System.Guid)">
             <summary>
@@ -371,6 +477,403 @@
             <param name="email"></param>
             <param name="senha"></param>
             <returns></returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Clinica">
+            <summary>
+            Classe que representa a entidade(tabela) Clinica
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.ComentariosConsulta">
+            <summary>
+            Classe que representa a entidade(tabela) ComentariosConsulta
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Consultas">
+            <summary>
+            Classe que representa a entidade(tabela) Consultas
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Especialidades">
+            <summary>
+            Classe que representa a entidade(tabela) Especialidades
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Medicos">
+            <summary>
+            Classe que representa a entidade(tabela) Medicos
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Pacientes">
+            <summary>
+            Classe que representa a entidade(tabela) Pacientes
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.StatusConsulta">
+            <summary>
+            Classe que representa a entidade(tabela) StatusConsulta
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.TiposUsuario">
+            <summary>
+            Classe que representa a entidade(tabela) TiposUsuario
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Domains.Usuario">
+            <summary>
+            Classe que representa a entidade(tabela) Usuario
+            </summary>
+            
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IClinicaRepository">
+            <summary>
+            Interface responsável pelo repositório ClinicaRepository
+            Definir os métodos que serão implementados pelo ClinicaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IClinicaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IClinicaRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="clinica">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IClinicaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IClinicaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="clinica">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository">
+            <summary>
+            Interface responsável pelo repositório ComentariosConsultaRepository
+            Definir os métodos que serão implementados pelo ComentariosConsultaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="comentario">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IComentariosConsultaRepository.Cadastar(HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="comentario">Objeto que será cadastrado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository">
+            <summary>
+            Interface responsável pelo repositório ConsultasRepository
+            Definir os métodos que serão implementados pelo ConsultasRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="consulta">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="consulta">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IConsultasRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository">
+            <summary>
+            Interface responsável pelo repositório EspecialidadesRepository
+            Definir os métodos que serão implementados pelo EspecialidadesRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="especialidades">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="especialidades[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IEspecialidadesRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository">
+            <summary>
+            Interface responsável pelo repositório MedicosRepository
+            Definir os métodos que serão implementados pelo MedicosRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Medicos)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="medico">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Medicos)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="medico[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IMedicosRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository">
+            <summary>
+            Interface responsável pelo repositório PacientesRepository
+            Definir os métodos que serão implementados pelo PacientesRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="paciente">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="paciente[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IPacientesRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository">
+            <summary>
+            Interface responsável pelo repositório StatusConsultaRepository
+            Definir os métodos que serão implementados pelo StatusConsultaRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="statusConsulta">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="statusConsulta[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IStatusConsultaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório TiposUsuarioRepository
+            Definir os métodos que serão implementados pelo TiposUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="tipoUsuario">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="tipoUsuario[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.ITiposUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo repositório UsuarioRepository
+            Definir os métodos que serão implementados pelo UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.BuscarPorEmailSenha(System.String,System.String)">
+            <summary>
+            Buscar um usuario atraves do email e senha
+            </summary>
+            <param name="email">Email do usuario a ser buscado</param>
+            <param name="senha">Senha do usuario a ser buscado</param>
+            <returns>Objeto Buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="usuario">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="usuario[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Interfaces.IUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
         </member>
         <member name="T:HealthClinic_CodeFirst_.Migrations.BD_Health">
             <inheritdoc />
@@ -455,6 +958,439 @@
         </member>
         <member name="M:HealthClinic_CodeFirst_.Migrations.Update_3.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.ClinicaRepository">
+            <summary>
+            Classe responsavel pelo repositorio Clinica
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.ClinicaRepository._healthcontext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ClinicaRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ClinicaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="clinica">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ClinicaRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Clinica)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="clinica">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ClinicaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ClinicaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository">
+            <summary>
+            Classe responsavel pelo repositorio ComentariosConsulta
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="comentario">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.Cadastar(HealthClinic_CodeFirst_.Domains.ComentariosConsulta)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="comentario">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ComentariosConsultaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.ConsultasRepository">
+            <summary>
+            Classe responsavel pelo repositorio Consultas
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.ConsultasRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="consulta">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Consultas)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="consulta">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.ConsultasRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository">
+            <summary>
+            Classe responsavel pelo repositorio Especialidades
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="especialidades[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Especialidades)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="especialidades">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.EspecialidadesRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.MedicosRepository">
+            <summary>
+            Classe responsavel pelo repositorio Medicos 
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.MedicosRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Medicos)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="medico[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Medicos)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="medico">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.MedicosRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.PacientesRepository">
+            <summary>
+            Classe responsavel pelo repositorio Pacientes
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.PacientesRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="paciente[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Pacientes)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="paciente">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.PacientesRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository">
+            <summary>
+            Classe responsavel pelo repositorio StatusConsulta
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="statusConsulta[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.StatusConsulta)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="statusConsulta">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.StatusConsultaRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository">
+            <summary>
+            Classe responsavel pelo repositorio TiposUsuario
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository._healthContext">
+             <summary>
+             Cria um novo objeto _healthContext do tipo HealthContext
+             </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="tipoUsuario[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.TiposUsuario)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="tipoUsuario">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.TiposUsuarioRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
+        </member>
+        <member name="T:HealthClinic_CodeFirst_.Repositories.UsuarioRepository">
+            <summary>
+            Classe responsavel pelo repositorio Usuario
+            </summary>
+        </member>
+        <member name="F:HealthClinic_CodeFirst_.Repositories.UsuarioRepository._healthContext">
+            <summary>
+            Cria um novo objeto _healthContext do tipo HealthContext
+            </summary>
+            
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.#ctor">
+            <summary>
+            Instancia o objeto _healthcontext para que haja referência aos dados do banco
+            </summary>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.Atualizar(System.Guid,HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Atualizar um objeto
+            </summary>
+            <param name="id">Id do objeto que será atualizado</param>
+            <param name="usuario[[">Objeto atualizado(novas informações)</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.BuscarPorEmailSenha(System.String,System.String)">
+            <summary>
+            Buscar um usuario atraves do email e senha
+            </summary>
+            <param name="email">Email do usuario a ser buscado</param>
+            <param name="senha">Senha do usuario a ser buscado</param>
+            <returns>Objeto Buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.BuscarPorId(System.Guid)">
+            <summary>
+            Buscar um objeto atraves do seu Id
+            </summary>
+            <param name="id">Id do objeto a ser buscado</param>
+            <returns>Objeto buscado</returns>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.Cadastrar(HealthClinic_CodeFirst_.Domains.Usuario)">
+            <summary>
+            Cadastrar um novo objeto
+            </summary>
+            <param name="usuario">Objeto que será cadastrado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.Deletar(System.Guid)">
+            <summary>
+            Deletar um objeto
+            </summary>
+            <param name="id">Id do objeto que será deletado</param>
+        </member>
+        <member name="M:HealthClinic_CodeFirst_.Repositories.UsuarioRepository.Listar">
+            <summary>
+            Listar todos os objetos cadastrados
+            </summary>
+            <returns>Lista com os objetos</returns>
         </member>
     </members>
 </doc>

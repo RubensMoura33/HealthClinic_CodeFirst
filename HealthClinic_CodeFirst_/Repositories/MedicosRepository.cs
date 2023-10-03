@@ -4,14 +4,30 @@ using HealthClinic_CodeFirst_.Interfaces;
 
 namespace HealthClinic_CodeFirst_.Repositories
 {
+    /// <summary>
+    /// Classe responsavel pelo repositorio Medicos 
+    /// </summary>
     public class MedicosRepository:IMedicosRepository
     {
+        /// <summary>
+        /// Cria um novo objeto _healthContext do tipo HealthContext
+        /// </summary>
+        /// 
         private readonly HealthContext? _healthContext;
 
+        /// <summary>
+        /// Instancia o objeto _healthcontext para que haja referência aos dados do banco
+        /// </summary>
         public MedicosRepository()
         {
             _healthContext = new HealthContext();   
         }
+
+        /// <summary>
+        /// Atualizar um objeto
+        /// </summary>
+        /// <param name="id">Id do objeto que será atualizado</param>
+        /// <param name="medico[">Objeto atualizado(novas informações)</param>
         public void Atualizar(Guid id, Medicos medico)
         {
             Medicos medicoBuscado = _healthContext!.Medicos.Find(id)!;
@@ -33,6 +49,11 @@ namespace HealthClinic_CodeFirst_.Repositories
             }
         }
 
+        /// <summary>
+        /// Buscar um objeto atraves do seu Id
+        /// </summary>
+        /// <param name="id">Id do objeto a ser buscado</param>
+        /// <returns>Objeto buscado</returns>
         public Medicos BuscarPorId(Guid id)
         {
             try
@@ -87,6 +108,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             }
         }
 
+        /// <summary>
+        /// Cadastrar um novo objeto
+        /// </summary>
+        /// <param name="medico">Objeto que será cadastrado</param>
         public void Cadastrar(Medicos medico)
         {
             try
@@ -101,6 +126,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             } 
         }
 
+        /// <summary>
+        /// Deletar um objeto
+        /// </summary>
+        /// <param name="id">Id do objeto que será deletado</param>
         public void Deletar(Guid id)
         {
             Medicos medicoBuscado = _healthContext!.Medicos.Find(id)!;
@@ -108,6 +137,10 @@ namespace HealthClinic_CodeFirst_.Repositories
             _healthContext!.SaveChanges();
         }
 
+        /// <summary>
+        /// Listar todos os objetos cadastrados
+        /// </summary>
+        /// <returns>Lista com os objetos</returns>
         public List<Medicos> Listar()
         {
             return _healthContext!.Medicos.ToList();

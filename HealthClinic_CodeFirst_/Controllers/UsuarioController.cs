@@ -6,13 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/usuario
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class UsuarioController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _usuarioRepository que irá receber todos os métodos definidos na interface IUsuarioRepository
+        /// </summary>
         private IUsuarioRepository? _usuarioRepository;
 
+        /// <summary>
+        /// Instancia o objeto _usuarioRepository para que haja referência aos métodos no repositório
+        /// </summary>
         public UsuarioController()
         {
             _usuarioRepository = new UsuarioRepository();
@@ -29,8 +45,8 @@ namespace HealthClinic_CodeFirst_.Controllers
         {
             try
             {
-               
-                return Ok( _usuarioRepository!.BuscarPorId(id));
+
+                return Ok(_usuarioRepository!.BuscarPorId(id));
 
             }
             catch (Exception erro)
@@ -46,8 +62,8 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpDelete]
-        public IActionResult Delete(Guid id) 
-        
+        public IActionResult Delete(Guid id)
+
         {
             try
             {
@@ -67,7 +83,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <param name="usuario"></param>
         /// <returns></returns>
         [HttpPost]
-        public IActionResult Post (Usuario usuario) 
+        public IActionResult Post(Usuario usuario)
         {
             try
             {
@@ -88,7 +104,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <param name="usuario"></param>
         /// <returns></returns>
         [HttpPut]
-        public IActionResult Put (Guid id, Usuario usuario)
+        public IActionResult Put(Guid id, Usuario usuario)
 
         {
             try
@@ -108,17 +124,17 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult Get ()
+        public IActionResult Get()
         {
             try
             {
-                  return Ok(_usuarioRepository!.Listar());
+                return Ok(_usuarioRepository!.Listar());
             }
             catch (Exception erro)
             {
 
                 return BadRequest(erro.Message);
-            } 
+            }
         }
 
         /// <summary>
@@ -127,13 +143,13 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <param name="email"></param>
         /// <param name="senha"></param>
         /// <returns></returns>
-        [HttpGet("Login")]  
+        [HttpGet("Login")]
         public IActionResult Get(string email, string senha)
         {
             try
             {
                 Usuario usuarioBuscado = _usuarioRepository!.BuscarPorEmailSenha(email, senha);
-                return Ok(usuarioBuscado);  
+                return Ok(usuarioBuscado);
             }
             catch (Exception erro)
             {
@@ -141,5 +157,5 @@ namespace HealthClinic_CodeFirst_.Controllers
                 return BadRequest(erro.Message);
             }
         }
-       }
+    }
 }

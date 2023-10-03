@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 namespace HealthClinic_CodeFirst_.Contexts
 {
+    /// <summary>
+    /// Classe Context(Conexao com o banco de dados)
+    /// </summary>
     public class HealthContext : DbContext
 
     {

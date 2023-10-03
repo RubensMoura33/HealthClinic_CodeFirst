@@ -6,13 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/ComentariosConsulta
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class ComentariosConsultaController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _comentariosConsultaRepository que irá receber todos os métodos definidos na interface IComentariosConsultaRepository
+        /// </summary>
         private IComentariosConsultaRepository? _comentariosConsultaRepository;
 
+        /// <summary>
+        /// Instancia o objeto _comentariosConsultaRepository para que haja referência aos métodos no repositório
+        /// </summary>
         public ComentariosConsultaController()
         {
             _comentariosConsultaRepository = new ComentariosConsultaRepository();
@@ -44,18 +60,18 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPost]
-        public IActionResult Post (ComentariosConsulta comentario)
+        public IActionResult Post(ComentariosConsulta comentario)
         {
             try
             {
-            _comentariosConsultaRepository!.Cadastar(comentario);
-            return StatusCode (201);
+                _comentariosConsultaRepository!.Cadastar(comentario);
+                return StatusCode(201);
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
-            } 
+            }
         }
 
         /// <summary>
@@ -65,18 +81,18 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpDelete]
-        public IActionResult Delete(Guid id) 
+        public IActionResult Delete(Guid id)
         {
             try
             {
-            _comentariosConsultaRepository!.Deletar(id);
-            return Ok("Deletado com sucesso");
+                _comentariosConsultaRepository!.Deletar(id);
+                return Ok("Deletado com sucesso");
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
-            } 
+            }
         }
 
         /// <summary>
@@ -87,12 +103,12 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPut]
-        public IActionResult Put (Guid id, ComentariosConsulta comentario)
+        public IActionResult Put(Guid id, ComentariosConsulta comentario)
         {
             try
             {
-            _comentariosConsultaRepository!.Atualizar(id, comentario);
-            return Ok("Atualizado com sucessso");
+                _comentariosConsultaRepository!.Atualizar(id, comentario);
+                return Ok("Atualizado com sucessso");
             }
             catch (Exception e)
             {
@@ -108,17 +124,17 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpGet("{id}")]
-        public IActionResult Get(Guid id) 
+        public IActionResult Get(Guid id)
         {
             try
             {
-                return Ok (_comentariosConsultaRepository!.BuscarPorId(id));
+                return Ok(_comentariosConsultaRepository!.BuscarPorId(id));
             }
             catch (Exception e)
             {
 
                 return BadRequest(e.Message);
-            } 
+            }
         }
     }
 }

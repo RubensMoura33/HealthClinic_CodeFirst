@@ -3,6 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HealthClinic_CodeFirst_.Domains
 {
+    /// <summary>
+    /// Classe que representa a entidade(tabela) Especialidades
+    /// </summary>
+    /// 
     [Table(nameof(Especialidades))]
     public class Especialidades
     {

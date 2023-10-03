@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HealthClinic_CodeFirst_.Domains
 {
+    /// <summary>
+    /// Classe que representa a entidade(tabela) Pacientes
+    /// </summary>
+    /// 
     [Table(nameof(Pacientes))]
     [Index(nameof(CPF), IsUnique = true)]
     [Index(nameof(Telefone), IsUnique = true)]

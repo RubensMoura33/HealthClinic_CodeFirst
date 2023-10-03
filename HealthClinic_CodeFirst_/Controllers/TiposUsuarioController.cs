@@ -6,13 +6,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthClinic_CodeFirst_.Controllers
 {
+    //Define que a rota de uma requisição será no seguinte formato
+    //dominio/api/nomeController
+    //ex: http://localhost:5000/api/tiposusuario
     [Route("api/[controller]")]
+
+    //Define que é um controlador de API
     [ApiController]
+
+    //Define que o tipo de resposta da API será no formato JSON
     [Produces("application/json")]
+
+    //Classe controladora que herda da controller base
+    //Onde será criado os Endpoints (rotas)
     public class TiposUsuarioController : ControllerBase
     {
+        /// <summary>
+        /// Objeto _tiposUsuarioRepository que irá receber todos os métodos definidos na interface IClinicaRepository
+        /// </summary>
         private ITiposUsuarioRepository? _tiposUsuarioRepository;
 
+        /// <summary>
+        /// Instancia o objeto _tiposUsuarioRepository para que haja referência aos métodos no repositório
+        /// </summary>
         public TiposUsuarioController()
         {
             _tiposUsuarioRepository = new TiposUsuarioRepository();
@@ -26,18 +42,18 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPut]
-        public IActionResult Put(Guid id, TiposUsuario tipoUsuario) 
+        public IActionResult Put(Guid id, TiposUsuario tipoUsuario)
         {
             try
             {
                 _tiposUsuarioRepository!.Atualizar(id, tipoUsuario);
-                 return StatusCode(200);
+                return StatusCode(200);
             }
             catch (Exception erro)
             {
 
                 return BadRequest(erro.Message);
-            } 
+            }
 
         }
 
@@ -48,7 +64,7 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpPost]
-        public IActionResult Post (TiposUsuario tipoUsuario)
+        public IActionResult Post(TiposUsuario tipoUsuario)
         {
             try
             {
@@ -110,12 +126,12 @@ namespace HealthClinic_CodeFirst_.Controllers
         /// <returns></returns>
         /// 
         [HttpDelete]
-         public IActionResult Delete(Guid id) 
+        public IActionResult Delete(Guid id)
         {
             try
             {
                 _tiposUsuarioRepository!.Deletar(id);
-               return Ok();
+                return Ok();
             }
             catch (Exception erro)
             {

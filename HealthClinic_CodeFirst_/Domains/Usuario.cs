@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HealthClinic_CodeFirst_.Domains
 {
+    /// <summary>
+    /// Classe que representa a entidade(tabela) Usuario
+    /// </summary>
+    /// 
     [Table(nameof(Usuario))]
     [Index(nameof(Email), IsUnique = true)]
     public class Usuario
